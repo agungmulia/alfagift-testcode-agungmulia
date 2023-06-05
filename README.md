@@ -1,6 +1,7 @@
 # Spring Boot & Vue 3 User and User Role Project
 ![image](https://github.com/agungmulia/alfagift-testcode-agungmulia/assets/90015124/0472814f-661f-40d6-b014-ea777a75ffe6)
 ![image](https://github.com/agungmulia/alfagift-testcode-agungmulia/assets/90015124/bb7d2f77-3d99-463d-94d6-97cbd3f906a9)
+![image](https://github.com/agungmulia/alfagift-testcode-agungmulia/assets/90015124/1b83a637-0447-43cb-9137-b3e31e4e4e08)
 The primary objective of this project is to implement CRUD (Create, Read, Update, Delete) operations for the User entity, allowing seamless management of user data. Additionally, the project includes functionality to insert User Roles, which are connected to the User table.
 
 The application leverages the power of Spring Boot to provide a robust and scalable backend framework. It takes advantage of Spring Data JPA to simplify database operations and Spring Security to ensure secure access to the application's resources.
