@@ -68,10 +68,19 @@ const store = createStore({
       let response;
       commit("setUsersLoading", true);
 
-      return axiosClient.post("/users", user).then((res) => {
-        commit("setUsersLoading", false);
-        return res;
-      });
+      return axiosClient
+        .post("/users", user)
+        .then((res) => {
+          commit("setUsersLoading", false);
+          console.log("ini res");
+          console.log(res);
+          return res;
+        })
+        .catch((err) => {
+          console.log(err.response.data.status);
+          commit("setUsersLoading", false);
+          return err;
+        });
     },
 
     ubahUser({ commit }, user) {

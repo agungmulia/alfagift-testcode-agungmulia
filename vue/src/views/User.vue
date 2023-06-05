@@ -23,6 +23,10 @@
 
         <!-- Form -->
         <form class="grid gap-y-2" @submit.prevent="submitForm">
+            <div v-if="Object.keys(error).length !== 0" class="rounded grid bg-red-200 py-2 px-4">
+                <h1 class="text-red-900 text-2xl">Perhatian!</h1>
+                <span v-for="(item, index) in error" :key="item" class="text-red-800">{{item}}</span>
+            </div>
           <div class="">
             <label for="name" class="block mb-2">Nama</label>
             <input v-model="formData.nama" id="name" type="text" class="w-full border px-4 py-2 rounded">
@@ -344,6 +348,7 @@ import { TrashIcon } from '@heroicons/vue/24/outline';
 const loading = computed(() => store.state.users.loading);
 const userData = computed(() => store.state.users);
 const roleData = computed(() => store.state.userRoles.data);
+const error = ref({})
 const value = 2;
 const formData = ref ({
     id: null,
@@ -366,6 +371,7 @@ const search = ref();
 
 function showDialog(type,data){
     isDialogOpen.value = true;
+    error.value = {};
     if(type == "add"){
         dialogTitle.value = 'Tambah Data User';
         this.formData = {};
@@ -395,6 +401,8 @@ function deleteUser(value) {
 function submitForm(){
     if(formData.value.id){
         store.dispatch("ubahUser", formData.value).then(res => {
+            console.log("res");
+            console.log(res);
             if (res.request.status == 200) {
                 isDialogOpen.value = false;
                 store.dispatch("getUsers", 0);
@@ -418,11 +426,10 @@ function submitForm(){
                     type: "success",
                     message: 'Tambah data user berhasil!',
                 });
-            } else {
-                store.commit("notify", {
-                    type: "error",
-                    message: 'error',
-                });
+            } else{
+                error.value = res.response.data.messages;
+                const responData = computed(() => res.response.data.messages);
+
             }
         })
     }
