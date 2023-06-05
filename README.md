@@ -47,7 +47,7 @@ To get started with this project, follow the steps below.
 4. Open the link
 
 #### Other Set Up
-1. The website requires the cors service to be connected, copy the vue link and copy it to UserController and UserRoleController headers.
+1. The website requires the cors service to be connected, copy the vue link and paste it to UserController and UserRoleController headers.
 
 -![image](https://github.com/agungmulia/alfagift-testcode-agungmulia/assets/90015124/6c7cd228-89a1-4744-9493-df187779a9e1)
 
