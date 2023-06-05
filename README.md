@@ -49,4 +49,7 @@ To get started with this project, follow the steps below.
 #### Other Set Up
 1. The website requires the cors service to be connected, copy the vue link and copy it to UserController and UserRoleController headers
 ![image](https://github.com/agungmulia/alfagift-testcode-agungmulia/assets/90015124/6c7cd228-89a1-4744-9493-df187779a9e1)
+2. In front end vue project navigate to axios.js to setup the connection to backend url
+![image](https://github.com/agungmulia/alfagift-testcode-agungmulia/assets/90015124/a8251e50-908e-4f1b-a94d-ba96742d9959)
+
 
