@@ -29,7 +29,8 @@ To get started with this project, follow the steps below.
 1. Clone the project
 3. Run `mvn clean install`
 4. Create database
-5. Navigate to `application.properties` in the main\resource and set the file to your database url
+5. Connect database
+6. Navigate to `application.properties` in the main\resource and set the file to your database url
    ```
    spring.datasource.url=jdbc:postgresql://(your postgresql db link)
    spring.datasource.username=(your postgresql username)
@@ -37,7 +38,7 @@ To get started with this project, follow the steps below.
    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
    spring.jpa.hibernate.ddl-auto=update
    ```
-6. Run `mvn spring-boot:run` to start the project or use springboot dashboard extension
+7. Run `mvn spring-boot:run` to start the project or use springboot dashboard extension
 #### Frontend
 1. Navigate to `vue` folder using terminal `cd vue`
 2. Run `npm install` to install vue.js project dependencies
